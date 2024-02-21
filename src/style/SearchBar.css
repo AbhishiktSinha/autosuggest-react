@@ -1,0 +1,97 @@
+.search-cities-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+
+    row-gap: 8px;
+
+    /* ------------------ */
+
+    .input-container {
+
+        width: 100%;
+        padding-inline: 6px;
+        padding-block: 8px;
+
+        border: 1px solid #888888;
+        border-radius: 12px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+
+        >input {
+            width: 100%;
+            outline: none;
+            border: none;
+
+            background-color: transparent;
+
+        }
+        >input:focus {
+            outline: none;
+            
+        }
+    }
+
+    .suggested-results-container {
+
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0; 
+        top:  115%;
+
+        opacity: 1;
+        transition: 0.3s;
+
+        box-shadow: 0 5px 10px -5px #888888;
+
+        max-height: 200px;
+        overflow-y: auto;
+
+        .suggested-result {
+            width: 100%;
+            background-color: transparent;
+            color: black;
+
+            font-size: 12px;
+            padding: 5px;
+            border-bottom: 0.5px solid #888888;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+        .suggested-result:hover {
+            background-color: #e3e3e3;
+        }
+        .suggested-result:active {
+            background-color: #d6dfe1;
+        }        
+    }
+    .suggested-results-container::-webkit-scrollbar{        
+        width: 2px;
+        background: transparent;
+    }
+    .suggested-results-container::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .suggested-results-container::-webkit-scrollbar-thumb {
+        background-color: #88888897;
+        border-radius: 20px;
+    }
+}
+.hide {
+    opacity: 0;
+    display: none;
+}
